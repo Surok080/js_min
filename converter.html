@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script>
+	
+	var a = prompt("сколько рублей перевести?");
+	a=parseInt(a);
+	var dollar = 75;
+	var evro = 85;
+
+	
+	var rubToDollar = a/dollar;
+	var rubToEvro = a/evro;
+
+	
+	//var evroCel = Math.round(evro * 100) / 100;
+	//var dollarCel = Math.round(dollar * 100) / 100;
+
+	alert(
+			a + ' рублей = ' + rubToEvro.toFixed(2) + ' евро \n' +
+			a + ' рублей = ' + rubToDollar.toFixed(2) + " долларов"
+		);
+	
+
+	
+	
+
+
+</script>

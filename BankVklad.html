@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var userMany = +prompt("Сколько денег выносите?");
+	var userProcent = +prompt("Под какой процент?");
+	var userTerm = +prompt("На сколько лет?");
+	var result='\n';
+	userProcent= userProcent/100;
+
+	for (var i = 1; i <= userTerm; i++) {
+		userMany=(userMany*userProcent)+userMany;
+		result+= i + " год - Сумма накопления  " + userMany.toFixed(2) + " руб\n";
+	}
+
+	alert(result);
+
+
+
+
+
+</script>

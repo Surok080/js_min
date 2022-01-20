@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer = parseInt(Math.random ()*100);
+	var maxTryCount=+prompt("Сколько попыток хотете иметь?");
+	var userAnswer = +prompt("Угадай число от 0 до 100");
+	let result = [];
+	var accumulation='';
+	for (var tryCount = 1; tryCount <= maxTryCount; tryCount++) {
+		if (userAnswer == answer) {
+			alert("Вы угадали! Правилный ответ " + answer);
+			break;
+		} else if (userAnswer > answer) {
+			accumulation=(userAnswer + " - Слишком большое ");
+			result.push(accumulation);
+		} else if (userAnswer < answer) {
+			accumulation=(userAnswer + " - Слишком маленькое ");
+			result.push(accumulation);
+			
+		}
+		
+		userAnswer = +prompt("Попробуйте еще раз от 0 до 100\n у вас осталось "
+		 + (maxTryCount-tryCount) + " - Попыток осталось\n" + result.join("\n"));
+	}
+	if (tryCount>=maxTryCount) {
+		alert("Вы проиграли! " + "Правильное число было " + answer);
+	}
+	
+
+
+</script>
